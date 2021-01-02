@@ -34,7 +34,6 @@ public class SampleController {
 
         resultBody.setResults(sampleList);
         resultBody.setServerCode("200");
-        resultBody.setServerCode("sucess");
 
         return resultBody;
     }
