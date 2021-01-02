@@ -1,5 +1,6 @@
 package com.spring.sample.controller;
 
+import com.spring.sample.common.ResultBody;
 import com.spring.sample.domain.Sample;
 import com.spring.sample.service.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,26 @@ public class SampleController {
         return "ssss";
     }
 
-    @RequestMapping(path = "/getSampleList",method = RequestMethod.GET)
-    public List<Sample> getSampleList() {
+    @RequestMapping(path = "/sample/list",method = RequestMethod.GET)
+    public ResultBody sampleList() {
+        ResultBody resultBody = new ResultBody();
+
         List<Sample> sampleList = sampleService.selectSampleList();
-        return sampleList;
+
+        resultBody.setResults(sampleList);
+        resultBody.setServerCode("200");
+        resultBody.setServerCode("sucess");
+
+        return resultBody;
+    }
+
+    @RequestMapping(path = "/sample/insert",method = RequestMethod.GET)
+    public ResultBody sampleInsert(Sample sample) {
+        //ResultBody resultBody = new ResultBody();
+
+        //todo try catch
+        sampleService.insertSample(sample);
+
+        return new ResultBody("insert Success");
     }
 }

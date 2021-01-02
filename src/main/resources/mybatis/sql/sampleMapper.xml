@@ -12,5 +12,20 @@
         WHERE 1
     </select>
 
+    <insert id="insertSample" parameterType="com.spring.sample.domain.Sample">
+        INSERT INTO sample_tb (
+               id,
+               title,
+               content,
+               create_id,
+               create_date
+           ) VALUES (
+             #{id},
+             #{title},
+             #{content},
+             'admin',
+             now()
+         )
+    </insert>
 
 </mapper>

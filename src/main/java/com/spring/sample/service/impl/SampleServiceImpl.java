@@ -17,4 +17,8 @@ public class SampleServiceImpl implements SampleService {
     public List<Sample> selectSampleList() {
         return sampleMapper.selectSampleList();
     }
+
+    public int insertSample(Sample sample){
+        return sampleMapper.insertSample(sample);
+    }
 }
