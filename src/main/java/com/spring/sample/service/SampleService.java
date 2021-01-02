@@ -7,4 +7,5 @@ import java.util.List;
 public interface SampleService {
     List<Sample> selectSampleList();
     int insertSample(Sample sample);
+    int deleteSample(Sample sample);
 }

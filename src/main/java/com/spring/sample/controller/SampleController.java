@@ -47,4 +47,16 @@ public class SampleController {
 
         return new ResultBody("insert Success");
     }
+
+    @RequestMapping(path = "/sample/delete",method = RequestMethod.GET)
+    public ResultBody sampleDelete(Sample sample) {
+        //ResultBody resultBody = new ResultBody();
+
+        //todo hederparam으로 받아도될듯
+
+        //todo try catch
+        sampleService.deleteSample(sample);
+
+        return new ResultBody("Delete Success");
+    }
 }
