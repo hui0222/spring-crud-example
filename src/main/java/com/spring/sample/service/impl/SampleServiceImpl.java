@@ -25,4 +25,8 @@ public class SampleServiceImpl implements SampleService {
     public int deleteSample(Sample sample){
         return sampleMapper.deleteSample(sample);
     }
+
+    public int updateSample(Sample sample){
+        return sampleMapper.updateSample(sample);
+    }
 }

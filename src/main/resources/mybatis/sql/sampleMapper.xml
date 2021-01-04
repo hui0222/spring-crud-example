@@ -32,4 +32,11 @@
         DELETE FROM sample_tb WHERE id = #{id}
     </delete>
 
+    <update id="updateSample" parameterType="com.spring.sample.domain.Sample">
+        UPDATE sample_tb SET
+            title = #{title},
+            content = #{content}
+        WHERE id = #{id}
+    </update>
+
 </mapper>

@@ -59,4 +59,16 @@ public class SampleController {
 
         return new ResultBody("Delete Success");
     }
+
+    @RequestMapping(path = "/sample/update",method = RequestMethod.GET)
+    public ResultBody sampleUpdate(Sample sample) {
+        //ResultBody resultBody = new ResultBody();
+
+        //todo 유효성검사
+
+        //todo try catch
+        sampleService.updateSample(sample);
+
+        return new ResultBody("update Success");
+    }
 }

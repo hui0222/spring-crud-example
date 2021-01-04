@@ -8,4 +8,6 @@ public interface SampleService {
     List<Sample> selectSampleList();
     int insertSample(Sample sample);
     int deleteSample(Sample sample);
+    int updateSample(Sample sample);
+
 }
